@@ -1,14 +1,11 @@
 Project MANGER
 ==============
 
-This is just a beginner's Android application, which can remember a list of phone numbers and send sms to the list just
-by a start of the application. It was created for fun and can be useful if one repeatedly needs to send the same message
-over and over again to the same list of phone numbers.
+This is just a beginner's Android application, which can remember a list of phone numbers and send sms to the list just by a start of the application. It was created for fun and can be useful if one repeatedly needs to send the same message over and over again to the same list of phone numbers.
 
 NOTES:
 
 1. When the application is first launched one can enter the list of phone number separated by a ;
-2. For the moment, the message field is not in use. The application sends a message "manger?" if the hour of the day is
-between 11H00 and 14H00 and "un café?" otherwise. This is hardcoded.
+2. For the moment, the message field is not in use. The application sends a message "manger?" if the hour of the day is between 11H00 and 14H00 and "un café?" otherwise. This is hardcoded.
 
 Thanks to https://github.com/daynatem and groupe_10@googlegroups.com
