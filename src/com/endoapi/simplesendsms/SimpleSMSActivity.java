@@ -26,8 +26,6 @@ public class SimpleSMSActivity extends Activity {
         setContentView(R.layout.main);
         Button sendBtn = (Button) findViewById(R.id.sendSmsBtn);
 
-
-        String msg = "";
         Calendar now = Calendar.getInstance();
         int hourOfDay = now.get(Calendar.HOUR_OF_DAY);
         if (hourOfDay > 11 && hourOfDay < 14) {
@@ -66,7 +64,7 @@ public class SimpleSMSActivity extends Activity {
                                     Toast.LENGTH_LONG).show();
                         }
                     } catch (Exception e) {
-                        Toast.makeText(SimpleSMSActivity.this, "Failed to send SMS",
+                        Toast.makeText(SimpleSMSActivity.this, "Failed to send SMS " + e.getMessage(),
                                 Toast.LENGTH_LONG).show();
                         e.printStackTrace();
                     }
@@ -97,18 +95,15 @@ public class SimpleSMSActivity extends Activity {
                 }
 
             } catch (Exception e) {
-                Toast.makeText(SimpleSMSActivity.this, "Failed to send SMS",
+                Toast.makeText(SimpleSMSActivity.this, "Failed to send SMS " + e.getMessage(),
                         Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
         }
     }
 
-
     private void sendSmsMessage(String address, String message) throws Exception {
         SmsManager smsMgr = SmsManager.getDefault();
         smsMgr.sendTextMessage(address, null, message, null, null);
     }
-
-
 }
