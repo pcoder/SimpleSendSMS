@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+// changes here
 public class SimpleSMSActivity extends Activity {
 	/** Called when the activity is first created. */
 	@Override
