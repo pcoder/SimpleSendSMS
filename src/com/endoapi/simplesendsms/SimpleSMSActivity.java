@@ -53,16 +53,26 @@ public class SimpleSMSActivity extends Activity {
                         msg = "un café?";
                     }
 
+                    String destination = addrTxt.getText().toString().trim();
                     try {
-                        sendSmsMessage(
-                                addrTxt.getText().toString(), msg);
-                        Toast.makeText(SimpleSMSActivity.this, "SMS Sent",
-                                Toast.LENGTH_LONG).show();
+
+                        String dests[] = destination.split(";");
+                        for (String dest : dests) {
+                            // safe to assume phone number to be 10
+                            if (dest.trim().length() == 10) {
+                                sendSmsMessage(dest, msg);
+                            }
+                            Toast.makeText(SimpleSMSActivity.this, "SMS Sent to " + dest,
+                                    Toast.LENGTH_LONG).show();
+                        }
                     } catch (Exception e) {
                         Toast.makeText(SimpleSMSActivity.this, "Failed to send SMS",
                                 Toast.LENGTH_LONG).show();
                         e.printStackTrace();
                     }
+
+                    // save the destination values so that they can be loaded next time
+                    prefs.edit().putString("destinations", destination).commit();
                 }
             });
         } else {
