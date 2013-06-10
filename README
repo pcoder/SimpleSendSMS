@@ -8,4 +8,4 @@ NOTES:
 1. When the application is first launched one can enter the list of phone number separated by a ;
 2. For the moment, the message field is not in use. The application sends a message "manger?" if the hour of the day is between 11H00 and 14H00 and "un café?" otherwise. This is hardcoded.
 
-Thanks to https://github.com/daynatem and groupe_10@googlegroups.com
+Thanks to https://github.com/daynatem and groupe_10@googlegroups.com.
